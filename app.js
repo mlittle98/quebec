@@ -7,7 +7,7 @@ const { ObjectId } = require('mongodb')
 const PORT = process.env.PORT || 3000;
 const herokuVar = process.env.HEROKU_NAME || "local Barry"
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const client = new MongoClient(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+const client = new MongoClient(touch.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 app.use(bodyParser.urlencoded({ extended: true }))
 app.set('view engine', 'ejs')
     
