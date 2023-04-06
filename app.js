@@ -4,8 +4,8 @@ const app = express()
 const bodyParser = require('body-parser')
 const { urlencoded } = require('body-parser')
 const { ObjectId } = require('mongodb')
-const PORT = process.env.PORT || 3000;
-const herokuVar = process.env.HEROKU_NAME || "local Barry"
+const PORT = touch.env.PORT || 3000;
+const herokuVar = touch.env.HEROKU_NAME || "local Barry"
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const client = new MongoClient(touch.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 app.use(bodyParser.urlencoded({ extended: true }))
